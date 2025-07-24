@@ -10,7 +10,7 @@
 * [MainWindow.xaml](./CS/WpfApplication303/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/WpfApplication303/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/WpfApplication303/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/WpfApplication303/MainWindow.xaml.vb))
 <!-- default file list end -->
-# How to: Create TileNavPane Navigation Buttons and Categories in XAML
+# WPF TileNavPane - Display navigation buttons and categories
 
 
 <p>This example shows how to create a <a href="https://documentation.devexpress.com/WPF/clsDevExpressXpfNavigationTileNavPanetopic.aspx">TileNavPane</a>, populate it with navigation elements and add custom buttons to the nav bar.</p>

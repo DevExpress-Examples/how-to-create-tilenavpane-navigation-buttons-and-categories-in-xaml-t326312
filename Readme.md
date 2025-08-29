@@ -7,15 +7,62 @@
 
 # WPF TileNavPane - Display Navigation Buttons and Categories
 
-This example creates a [`TileNavPane`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane), populate it with navigation elements and add custom buttons to the nav bar.
+This example builds a navigation panel with the [`TileNavPane`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane) control. This control displays default and custom buttons in the navigation bar and defines a category hierarchy with nested items.
 
-In the XAML markup, four buttons are added to the [`NavButtons`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane.NavButtons) collection. Buttons added to this collection are displayed in the nav bar. The first, which is aligned at the left margin of the nav bar, is the Main Button. The `IsMain` property of this button is set to `true`. Other buttons are aligned to the right using the `HorizontalAlignment` property. The second button contains items, and so a drop-down tile bar is invoked when this button is clicked. Button glyphs are differently aligned (the`GlyphAlignment` property) and the rightmost button does not have a textual content (the `Content` property). All glyphs are specified to be displayed with the glyph theming feature enabled (the `AllowGlyphTheming` property).
+Use this example to create a clean and touch-friendly navigation experience similar to Windows modern apps. The `TileNavPane` allows you to group navigation commands, display glyphs, and create expandable menus that simplify access to nested views or commands.
 
-One category ([`TileNavCategory`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavCategory)) is added the [`Categories`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane.Categories) collection. This category contains one child item, which in turn contains two sub-items. The textual and graphical content of tiles is specified with the `TileContent` and `TileGlyph` properties. Textual content of the corresponding buttons in the nav bar is specified with the `Content` property.
+![Display Navigation Buttons and Categories](./Images/tile-nav-pane.jpg)
 
 ## Implementation Details
 
-...
+### Navigation Bar Buttons
+
+The following code example defines four navigation buttons in the [`TileNavPane.NavButtons`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane.NavButtons) collection:
+
+```csharp
+<dxnav:TileNavPane.NavButtons>
+    // The "DevExpress CRM" main button
+    <dxnav:NavButton Content="DevExpress CRM" 
+                     IsMain="True" 
+                     Glyph="{dx:DXImageGrayscale Image=Home_32x32.png}" 
+                     AllowGlyphTheming="True"/>
+    // The "Create..." button with nested items
+    <dxnav:NavButton Content="Create..." 
+                     HorizontalAlignment="Right" 
+                     AllowGlyphTheming="True" 
+                     Glyph="{dx:DXImageGrayscale Image=Add_32x32.png}">
+        <dxnav:TileNavItem Content="Staff">
+            <dxnav:TileNavSubItem Content="Manager"/>
+            <dxnav:TileNavSubItem Content="Seller"/>
+        </dxnav:TileNavItem>
+        <dxnav:TileNavItem Content="Client"/>
+    </dxnav:NavButton>
+    // The "Settings" button
+    <dxnav:NavButton Content="Settings" 
+                     GlyphAlignment="Right" 
+                     Glyph="{dx:DXImageGrayscale Image=Customization_32x32.png}" AllowGlyphTheming="True" 
+                     HorizontalAlignment="Right"/>
+    // The button intended to close the panel
+    <dxnav:NavButton HorizontalAlignment="Right" 
+                     Glyph="{dx:DXImageGrayscale Image=Cancel_32x32.png}" 
+                     AllowGlyphTheming="True"/>
+</dxnav:TileNavPane.NavButtons>
+```
+
+### Navigation Categories and Items
+
+The following code example defines one navigation category in the [`TileNavPane.Categories`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane.Categories) collection. The category contains a single item with two sub-items:
+
+```csharp
+<dxnav:TileNavCategory Content="Sales">
+    <dxnav:TileNavItem Content="Dashboards"
+                       TileGlyph="{dx:DXImageGrayscale Image=Pie_32x32.png}"
+                       AllowGlyphTheming="True">
+        <dxnav:TileNavSubItem Content="Sales pipeline"/>
+        <dxnav:TileNavSubItem Content="Estimated revenue"/>
+    </dxnav:TileNavItem>
+</dxnav:TileNavCategory>
+```
 
 ## Files to Review
 

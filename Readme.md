@@ -84,7 +84,7 @@ The following code example defines one navigation category in the [`TileNavPane.
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
-[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-create-tilenavpane-navigation-buttons-and-categories-in-xaml-t326312&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=how-to-create-tilenavpane-navigation-buttons-and-categories-in-xaml-t326312&~~~was_helpful=no)
+[<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-tilenavpane-display-nav-buttons-and-categories&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-tilenavpane-display-nav-buttons-and-categories&~~~was_helpful=no)
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->

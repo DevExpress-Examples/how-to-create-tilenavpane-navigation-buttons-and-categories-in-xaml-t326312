@@ -7,9 +7,9 @@
 
 # WPF TileNavPane - Display Navigation Buttons and Categories
 
-This example builds a navigation panel with the [`TileNavPane`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane) control. This control displays default and custom buttons in the navigation bar and defines a category hierarchy with nested items.
+This example builds a navigation panel using the [`TileNavPane`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Navigation.TileNavPane) control. This control displays default and custom buttons in a navigation bar and defines a category hierarchy populated with nested items.
 
-Use this example to create a clean and touch-friendly navigation experience similar to Windows modern apps. The `TileNavPane` allows you to group navigation commands, display glyphs, and create expandable menus that simplify access to nested views or commands.
+Use this example to introduce a clean and touch-friendly navigation experience, similar to modern Windows apps. The `TileNavPane` allows you to group navigation commands, display glyphs, and create expandable menus that simplify access to nested views or commands.
 
 ![Display Navigation Buttons and Categories](./Images/tile-nav-pane.jpg)
 
